@@ -28,6 +28,10 @@ issues = "amplifier_collection_issues:get_collection_info"
 
 [tool.hatch.build.targets.wheel]
 packages = ["amplifier_collection_issues"]
+include = [
+    "amplifier_collection_issues/profiles/*.md",
+    "amplifier_collection_issues/context/*.md",
+]
 
 [tool.hatch.build.targets.sdist]
 include = [

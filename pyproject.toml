@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "amplifier-collection-issues"
@@ -26,19 +26,23 @@ dependencies = []
 [project.entry-points."amplifier.collections"]
 issues = "amplifier_collection_issues:get_collection_info"
 
-[tool.hatch.build.targets.wheel]
-packages = ["amplifier_collection_issues"]
-include = [
-    "amplifier_collection_issues/profiles/*.md",
-    "amplifier_collection_issues/context/*.md",
-    "amplifier_collection_issues/modules/**/*",
+[project.urls]
+repository = "https://github.com/payneio/amplifier-collection-issues"
+
+[tool.amplifier.collection]
+author = "Microsoft"
+capabilities = [
+    "Issue-aware development profile",
+    "Persistent issue tracking with dependency management",
+    "Beads-compatible issue management"
 ]
 
-[tool.hatch.build.targets.sdist]
-include = [
-    "/amplifier_collection_issues",
-    "/profiles",
-    "/context",
-    "/README.md",
-    "/LICENSE",
+[tool.setuptools]
+packages = ["amplifier_collection_issues"]
+
+[tool.setuptools.package-data]
+amplifier_collection_issues = [
+    "*.toml",
+    "profiles/*.md",
+    "context/*.md"
 ]

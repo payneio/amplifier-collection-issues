@@ -1,4 +1,11 @@
-include README.md
+# Include metadata files
 include LICENSE
-recursive-include profiles *.md
-recursive-include context *.md
+include CODE_OF_CONDUCT.md
+include SECURITY.md
+include SUPPORT.md
+include README.md
+include pyproject.toml
+
+# Include collection data (profiles and context only, not modules)
+recursive-include amplifier_collection_issues/profiles *.md
+recursive-include amplifier_collection_issues/context *.md

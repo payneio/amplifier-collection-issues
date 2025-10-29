@@ -4,8 +4,13 @@ version = "0.1.0"
 description = "Issue management tool module for Amplifier"
 requires-python = ">=3.11"
 dependencies = [
-    "amplifier-core",
+    "amplifier-module-issue-manager",
 ]
+
+[tool.uv.sources.amplifier-module-issue-manager]
+git = "https://github.com/payneio/amplifier-collection-issues"
+subdirectory = "modules/issue-manager"
+branch = "main"
 
 [project.entry-points."amplifier.modules"]
 tool-issue = "amplifier_module_tool_issue:mount"
@@ -14,6 +19,5 @@ tool-issue = "amplifier_module_tool_issue:mount"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv.sources.amplifier-core]
-path = "../amplifier-core"
-editable = true
+[tool.hatch.metadata]
+allow-direct-references = true

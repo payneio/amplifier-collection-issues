@@ -8,10 +8,8 @@ version = "0.1.0"
 description = "Issue management collection for Amplifier"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
-authors = [
-    {name = "Microsoft", email = "amplifier@microsoft.com"}
-]
+license = { text = "MIT" }
+authors = [{ name = "Microsoft", email = "amplifier@microsoft.com" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -34,11 +32,11 @@ author = "Microsoft"
 capabilities = [
     "Issue-aware development profile",
     "Persistent issue tracking with dependency management",
-    "Beads-compatible issue management"
+    "Beads-compatible issue management",
 ]
 
 [tool.setuptools]
 packages = ["amplifier_collection_issues"]
 
 [tool.setuptools.package-data]
-amplifier_collection_issues = ["*.toml"]
+amplifier_collection_issues = ["*.toml", "profiles/*.md", "context/*.md"]

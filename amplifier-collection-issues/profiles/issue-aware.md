@@ -34,7 +34,7 @@ tools:
   - module: tool-bash
     source: git+https://github.com/microsoft/amplifier-module-tool-bash@main
   - module: tool-issue
-    source: git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues/amplifier_collection_issues/modules/tool-issue
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues/amplifier_collection_issues/modules/tool-issue
     config:
       data_dir: .amplifier/issues
       auto_create_dir: true

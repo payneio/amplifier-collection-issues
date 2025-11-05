@@ -1,4 +1,4 @@
-# amplifier-payne
+# payne-amplifier
 
 This repo contains collections, profiles, and other components developed and used by Paul Payne to augment the Microsoft Amplifier framework.
 
@@ -10,13 +10,13 @@ To use the collections in this repository, install them via the amplifier CLI:
 
 ```bash
 # Install the issues collection from git (--local for project-specific install)
-amplifier collection add git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues --local
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues --local
 ```
 
 Or for user-global installation:
 
 ```bash
-amplifier collection add git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues
 ```
 
 After installation, the collection resources are available via:

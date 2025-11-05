@@ -1,4 +1,4 @@
-# amplifier-payne
+# payne-amplifier
 
 Personal collections and extensions for [Microsoft Amplifier](https://github.com/microsoft/amplifier).
 

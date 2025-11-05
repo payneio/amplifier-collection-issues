@@ -25,7 +25,7 @@ dependencies = []
 issues = "amplifier_collection_issues:get_collection_info"
 
 [project.urls]
-repository = "https://github.com/payneio/amplifier-payne"
+repository = "https://github.com/payneio/payne-amplifier"
 
 [tool.amplifier.collection]
 author = "Microsoft"

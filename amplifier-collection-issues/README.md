@@ -19,7 +19,7 @@ uv tool install git+https://github.com/microsoft/amplifier@next
 Then add this collection:
 
 ```bash
-uv tool install git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues
+uv tool install git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ Add the tool to your own profile:
 ```yaml
 tools:
   - module: tool-issue
-    source: git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues/amplifier_collection_issues/modules/tool-issue
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues/amplifier_collection_issues/modules/tool-issue
     config:
       data_dir: .amplifier/issues
       actor: assistant

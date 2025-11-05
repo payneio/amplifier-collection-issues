@@ -1,136 +1,104 @@
-# Amplifier Collection: Issue Management
+# Amplifier Collection: Issues
 
-Integrates Beads issue tracking with Amplifier for task-aware AI workflows.
+Persistent issue tracking for Amplifier sessions with dependency management and priority-based scheduling.
 
-## What This Collection Provides
+## What This Provides
 
-- **Profile**: `issue-aware` - Configures session for issue management workflows
-- **Context**: Issue workflow guidance and examples for AI agents
-- **MCP Integration**: Automatically detects and uses beads MCP server when available
+- **issue_manager tool** - Create, list, update, and close issues with dependencies
+- **issue-aware profile** - Pre-configured session with issue management enabled
+- **Local storage** - Issues stored in `.amplifier/issues/` as JSONL files
 
 ## Installation
 
+First, install Amplifier:
+
 ```bash
-pip install amplifier-collection-issues
+uv tool install git+https://github.com/microsoft/amplifier@next
+```
+
+Then add this collection:
+
+```bash
+uv tool install git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues
 ```
 
 ## Usage
 
-### Via Profile
+### Quick Start
+
+Run Amplifier with the issue-aware profile:
 
 ```bash
 amplifier run --profile issue-aware
 ```
 
-The profile automatically:
-- Configures session with issue management capabilities
-- Loads relevant context for issue workflows
-- Enables beads MCP tools if available
+Then interact with issues:
+
+```
+You: "Create an issue to implement user authentication"
+Assistant: [Creates issue with the issue_manager tool]
+
+You: "What can I work on?"
+Assistant: [Lists ready issues with get_ready operation]
+
+You: "Work on issue <id>"
+Assistant: [Updates status to in_progress and begins work]
+```
 
 ### Manual Configuration
 
-```toml
-[session]
-collections = ["issues"]
+Add the tool to your own profile:
 
-[context]
-include_from_collections = ["issues"]
+```yaml
+tools:
+  - module: tool-issue
+    source: git+https://github.com/payneio/amplifier-payne@main#subdirectory=amplifier-collection-issues/amplifier_collection_issues/modules/tool-issue
+    config:
+      data_dir: .amplifier/issues
+      actor: assistant
 ```
 
-## What Gets Configured
+## Data Storage
 
-### Profile: issue-aware
-
-- **Description**: Task management via Beads issue tracking
-- **System Instructions**: Guides agents on issue workflow best practices
-- **Context Files**: Loads workflow guidance and examples
-- **MCP Tools**: Enables beads integration when available
-
-### Context Files
-
-1. **issue-workflow.md**: Core workflow patterns and best practices
-2. **examples.md**: Concrete usage examples and scenarios
-
-## Beads MCP Server
-
-This collection works best with the beads MCP server:
-
-```json
-{
-  "mcpServers": {
-    "beads": {
-      "command": "uvx",
-      "args": ["--from", "beads-project", "beads", "mcp"]
-    }
-  }
-}
-```
-
-The collection detects when beads is available and provides appropriate guidance.
-
-## Issue Workflow Patterns
-
-### Discovery & Planning
-- List existing issues to understand project state
-- Create issues for new work discovered
-- Manage dependencies between tasks
-
-### Active Development
-- Update issue status as work progresses
-- Add notes about implementation decisions
-- Close issues when work completes
-
-### Collaboration
-- Use consistent status values (open, in_progress, blocked, closed)
-- Document blocking conditions clearly
-- Maintain dependency graph accuracy
-
-## When to Use This Collection
-
-**Include when:**
-- Working on projects using Beads for task tracking
-- Need structured issue management during development
-- Want AI to help manage task lifecycle
-
-**Skip when:**
-- Project doesn't use issue tracking
-- Ad-hoc exploratory work without formal tasks
-- Simple one-off scripts or prototypes
-
-## Example Workflows
-
-### Starting New Work
+Issues are stored locally in your project:
 
 ```
-User: "Work on issue AMP-15"
-
-Agent (with collection):
-1. Shows issue details (status, description, dependencies)
-2. Checks for blockers
-3. Updates status to in_progress
-4. Proceeds with implementation
-5. Closes issue when complete
+<project-root>/
+└── .amplifier/
+    └── issues/
+        ├── issues.jsonl          # Issue records
+        ├── dependencies.jsonl    # Issue relationships
+        └── events.jsonl          # Change history
 ```
 
-### Discovery During Work
+## Issue Operations
 
-```
-Agent discovers missing functionality:
-1. Creates new issue describing the gap
-2. Links as dependency if blocking current work
-3. Continues or pivots based on priority
-```
+The issue_manager tool supports:
 
-## Development
+- **create** - New issue with priority and type
+- **list** - Filter by status, priority, assignee
+- **get** - Show issue details
+- **update** - Change status, priority, blocking notes
+- **close** - Mark complete with reason
+- **get_ready** - Find work with no blockers
+- **get_blocked** - See blocked issues
+- **add_dep** - Link issues with dependencies
+- **remove_dep** - Remove dependency links
 
-```bash
-# Install in development mode
-cd amplifier-collection-issues
-pip install -e .
+## Issue States
 
-# Test collection loading
-python -c "from amplifier_collection_issues import get_collection_info; print(get_collection_info())"
-```
+- **open** - Created, not yet started
+- **in_progress** - Actively being worked on
+- **blocked** - Waiting on dependencies
+- **closed** - Completed
+
+## Priorities
+
+- **0** - Critical
+- **1** - High
+- **2** - Normal (default)
+- **3** - Low
+- **4** - Deferred
 
 ## Contributing
 

@@ -3,40 +3,16 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "amplifier-collection-issues"
+name = "full-collection"
 version = "0.1.0"
-description = "Issue management collection for Amplifier"
+description = "Full collection of all payne amplifier components"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Microsoft", email = "amplifier@microsoft.com" }]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-]
-dependencies = []
-
-[project.entry-points."amplifier.collections"]
-issues = "amplifier_collection_issues:get_collection_info"
-
-[project.urls]
-repository = "https://github.com/payneio/payne-amplifier"
 
 [tool.amplifier.collection]
-author = "Microsoft"
+author = "Paul Payne"
 capabilities = [
     "Issue-aware development profile",
     "Persistent issue tracking with dependency management",
-    "Beads-compatible issue management",
 ]
-
-[tool.setuptools]
-packages = { find = {} }
-
-[tool.setuptools.package-data]
-amplifier_collection_issues = ["*.toml", "profiles/*.md"]

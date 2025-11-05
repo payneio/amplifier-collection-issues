@@ -2,9 +2,12 @@
 
 Personal collections and extensions for [Microsoft Amplifier](https://github.com/microsoft/amplifier).
 
-## Collections
+## Usage
 
-- [amplifier-collection-issues](./amplifier-collection-issues/) - Persistent issue tracking with dependency management
+```bash
+amplifier module refresh
+amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=full-collection"
+```
 
 ## License
 

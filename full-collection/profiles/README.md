@@ -1,4 +1,4 @@
-# Amplifier Collection: Issues
+# Amplifier profile: issue-aware
 
 Persistent issue tracking for Amplifier sessions with dependency management and priority-based scheduling.
 

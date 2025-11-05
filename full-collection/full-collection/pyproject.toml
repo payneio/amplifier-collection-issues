@@ -3,17 +3,16 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "amplifier-collection-issues"
+name = "full-collection"
 version = "0.1.0"
-description = "Issue management collection for Amplifier"
-readme = "../README.md"
+description = "Full collection of all payne amplifier components"
+readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 
 [tool.amplifier.collection]
-author = "Microsoft"
+author = "Paul Payne"
 capabilities = [
     "Issue-aware development profile",
     "Persistent issue tracking with dependency management",
-    "Beads-compatible issue management",
 ]

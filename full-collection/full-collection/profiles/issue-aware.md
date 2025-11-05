@@ -40,6 +40,10 @@ tools:
       auto_create_dir: true
       actor: assistant
 
+ui:
+  show_thinking_stream: true
+  show_tool_lines: 5
+
 hooks:
   - module: hooks-logging
     source: git+https://github.com/microsoft/amplifier-module-hooks-logging@main

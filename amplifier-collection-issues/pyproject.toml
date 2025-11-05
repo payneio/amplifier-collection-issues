@@ -36,7 +36,7 @@ capabilities = [
 ]
 
 [tool.setuptools]
-packages = ["amplifier_collection_issues"]
+packages = { find = {} }
 
 [tool.setuptools.package-data]
 amplifier_collection_issues = ["*.toml", "profiles/*.md", "context/*.md"]

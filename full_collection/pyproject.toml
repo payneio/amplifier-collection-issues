@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "full-collection"
@@ -8,7 +8,11 @@ version = "0.1.0"
 description = "Full collection of all payne amplifier components"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
+authors = [{ name = "Paul Payne", email = "paul@payneio.com" }]
+
+[project.entry-points."amplifier.collections"]
+full = "__init__:get_collection_info"
 
 [tool.amplifier.collection]
 author = "Paul Payne"
@@ -16,3 +20,6 @@ capabilities = [
     "Issue-aware development profile",
     "Persistent issue tracking with dependency management",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

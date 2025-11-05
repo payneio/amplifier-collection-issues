@@ -4,17 +4,17 @@ Personal collections and extensions for [Microsoft Amplifier](https://github.com
 
 ## Usage
 
-### Adding the full collection
+### Adding the max payne collection
 
 ```bash
 amplifier module refresh
-amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=full_collection"
+amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=max_payne_collection"
 ```
 
 ### Removing the collection
 
-```
-amplifier collection remove full_collection
+```bash
+amplifier collection remove max-payne-collection
 amplifier module refresh
 ```
 

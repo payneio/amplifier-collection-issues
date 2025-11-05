@@ -1,7 +1,7 @@
 ---
 profile:
   name: issue-aware
-  version: 1.0.0
+  version: 1.1.0
   description: Issue-aware profile with autonomous issue management
   extends: base
 

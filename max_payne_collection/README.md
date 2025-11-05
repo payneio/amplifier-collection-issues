@@ -9,7 +9,7 @@ Complete collection of all payne amplifier components including:
 ## Installation
 
 ```bash
-amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=full-collection"
+amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=max_payne_collection"
 ```
 
 ## What's Included
@@ -28,6 +28,3 @@ amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#su
 ### Agents
 - Custom AI agent configurations
 
-## License
-
-MIT License - See [LICENSE](../LICENSE) for details

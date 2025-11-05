@@ -19,7 +19,7 @@ uv tool install git+https://github.com/microsoft/amplifier@next
 Then add this collection:
 
 ```bash
-uv tool install git+https://github.com/payneio/payne-amplifier@main#subdirectory=full-collection
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ uv tool install git+https://github.com/payneio/payne-amplifier@main#subdirectory
 Run Amplifier with the issue-aware profile:
 
 ```bash
-amplifier run --profile issue-aware
+amplifier run --profile max-payne-collection:issue-aware
 ```
 
 Then interact with issues:
@@ -52,7 +52,7 @@ Add the tool to your own profile:
 ```yaml
 tools:
   - module: tool-issue
-    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=full-collection/modules/tool-issue
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/tool-issue
     config:
       data_dir: .amplifier/issues
       actor: assistant

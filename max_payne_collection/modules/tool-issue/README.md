@@ -9,8 +9,7 @@ Provides a thin wrapper over IssueManager operations, exposing issue queue manag
 ## Installation
 
 ```bash
-cd amplifier-module-tool-issue
-uv pip install -e .
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection
 ```
 
 ## Configuration
@@ -20,11 +19,11 @@ Add to your profile:
 ```yaml
 tools:
   - module: tool-issue
-    source: file:///path/to/amplifier-module-tool-issue
-
-issue_manager:
-  module: issue-manager
-  source: file:///path/to/amplifier-module-issue-manager
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/tool-issue
+    config:
+      data_dir: .amplifier/issues
+      auto_create_dir: true
+      actor: assistant
 ```
 
 ## Operations
@@ -37,7 +36,3 @@ issue_manager:
 - `add_dependency`: Add a dependency between issues
 - `get_ready`: Get issues ready to work on (no blockers)
 - `get_blocked`: Get blocked issues and their blockers
-
-## License
-
-MIT

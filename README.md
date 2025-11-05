@@ -9,9 +9,10 @@ Personal collections and extensions for [Microsoft Amplifier](https://github.com
 ```bash
 amplifier module refresh
 amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=max_payne_collection"
-```
 
-### Removing the collection
+# Try out a profile, or add any of the components to your own profile, e.g.:
+amplifier profile use max-payne-collection:issue-aware
+```
 
 ```bash
 amplifier collection remove max-payne-collection

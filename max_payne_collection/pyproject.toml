@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "full-collection"
+name = "max-payne-collection"
 version = "0.1.0"
 description = "Full collection of all payne amplifier components"
 readme = "README.md"

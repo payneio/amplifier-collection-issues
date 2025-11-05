@@ -4,4 +4,4 @@ include README.md
 include pyproject.toml
 
 # Include collection data (profiles and context only, not modules)
-recursive-include full-collection/profiles full-collection/*.md
+recursive-include max-payne-collection/profiles max-payne-collection/*.md

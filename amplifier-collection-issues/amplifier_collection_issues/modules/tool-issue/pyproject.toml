@@ -8,8 +8,8 @@ dependencies = [
 ]
 
 [tool.uv.sources.amplifier-module-issue-manager]
-git = "https://github.com/payneio/amplifier-collection-issues"
-subdirectory = "amplifier_collection_issues/modules/issue-manager"
+git = "https://github.com/payneio/amplifier-payne"
+subdirectory = "amplifier-collection-issues/amplifier_collection_issues/modules/issue-manager"
 branch = "main"
 
 [project.entry-points."amplifier.modules"]

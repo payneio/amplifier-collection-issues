@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amplifier-collection-issues"
+version = "0.1.0"
+description = "Issue management collection for Amplifier"
+readme = "../README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.amplifier.collection]
+author = "Microsoft"
+capabilities = [
+    "Issue-aware development profile",
+    "Persistent issue tracking with dependency management",
+    "Beads-compatible issue management",
+]

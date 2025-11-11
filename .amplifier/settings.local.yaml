@@ -1,0 +1,9 @@
+profile:
+  active: max-payne-collection:issue-aware
+config:
+  providers:
+  - module: provider-anthropic
+    config:
+      default_model: claude-sonnet-4-5
+      api_key: ${ANTHROPIC_API_KEY}
+    source: git+https://github.com/microsoft/amplifier-module-provider-anthropic@main

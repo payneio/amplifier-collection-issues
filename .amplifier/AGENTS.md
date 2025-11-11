@@ -141,7 +141,7 @@ This file is their map. Don't let the map drift from the territory.
 
 ## 📚 Essential Reading
 
-Read @ai_context/README.md for essential context.
+Read @README.md for essential context.
 
 ---
 

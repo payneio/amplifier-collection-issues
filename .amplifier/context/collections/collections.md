@@ -4,24 +4,24 @@
 
 To use the collections in this repository, install them via the amplifier CLI:
 
-### amplifier-collection-issues
+### max-payne-collection
 
 ```bash
 # Install the issues collection from git (--local for project-specific install)
-amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues --local
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=max-payne-collection --local
 ```
 
 Or for user-global installation:
 
 ```bash
-amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=amplifier-collection-issues
+amplifier collection add git+https://github.com/payneio/payne-amplifier@main#subdirectory=max-payne-collection
 ```
 
 After installation, the collection resources are available via:
-- `@amplifier-collection-issues/README.md`
-- `@amplifier-collection-issues/profiles/issue-aware.md`
-- `@amplifier-collection-issues/context/issue-workflow.md`
-- `@amplifier-collection-issues/context/examples.md`
+- `@max-payne-collection/README.md`
+- `@max-payne-collection/profiles/issue-aware.md`
+- `@max-payne-collection/context/issue-workflow.md`
+- `@max-payne-collection/context/examples.md`
 
 ### Verify Installation
 
@@ -30,9 +30,9 @@ After installation, the collection resources are available via:
 amplifier collection list
 
 # Show collection details
-amplifier collection show amplifier-collection-issues
+amplifier collection show max-payne-collection
 ```
 
 ## Collections
 
-@amplifier-collection-issues/README.md
+@max-payne-collection/README.md

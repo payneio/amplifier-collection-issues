@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "amplifier-payne"
+name = "payne-amplifier"
 version = "0.1.0"
 description = "Personal collections and extensions for Microsoft Amplifier"
 readme = "README.md"
@@ -22,7 +22,7 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-repository = "https://github.com/payneio/amplifier-payne"
+repository = "https://github.com/payneio/payne-amplifier"
 
 [tool.hatch.build.targets.wheel]
 packages = []

@@ -9,7 +9,7 @@ Complete collection of all payne amplifier components including:
 ## Installation
 
 ```bash
-amplifier collection add "git+https://github.com/payneio/amplifier-payne@main#subdirectory=max_payne_collection"
+amplifier collection add "git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection"
 ```
 
 ## What's Included

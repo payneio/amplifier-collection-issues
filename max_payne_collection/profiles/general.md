@@ -8,7 +8,7 @@ profile:
 session:
   orchestrator:
     module: loop-streaming
-    source: git+https://github.com/microsoft/amplifier-module-loop-streaming@main
+    source: git+https://github.com/payneio/payne-amplifier@main#subdirectory=max_payne_collection/modules/amplifier-module-loop-streaming
     config:
       extended_thinking: true
   context:
